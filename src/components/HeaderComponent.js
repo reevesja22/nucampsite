@@ -18,7 +18,7 @@ class Header extends Component {
 
                 <Navbar dark sticky="top">
                     <div className="container">
-                        <NavbarBrand href="/">NuCamp</NavbarBrand>
+                        <NavbarBrand href="/">NuCamp Site</NavbarBrand>
                     </div>
                 </Navbar>
             </React.Fragment>
