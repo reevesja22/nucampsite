@@ -1,14 +1,13 @@
 import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 
-
 function RenderDirectoryItem({campsite, onClick}) {
-    return(
-        <Card onClick={() => this.props.onClick(campsite.id)}>
+    return (
+        <Card onClick={() => onClick(campsite.id)}>
             <CardImg width="100%" src={campsite.image} alt={campsite.name} />
-                <CardImgOverlay>
-                    <CardTitle>{campsite.name}</CardTitle>
-                </CardImgOverlay>
+            <CardImgOverlay>
+                <CardTitle>{campsite.name}</CardTitle>
+            </CardImgOverlay>
         </Card>
     );
 }
@@ -22,7 +21,8 @@ function Directory(props) {
             </div>
         );
     });
-    return(
+
+    return (
         <div className="container">
             <div className="row">
                 {directory}

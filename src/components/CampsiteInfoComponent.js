@@ -33,20 +33,17 @@ function RenderComments({comments}) {
     }
 
 function CampsiteInfo(props) {
-        if(props.campsite !== null) {
-        return(
+    if (props.campsite) {
+        return (
             <div className="container">
                 <div className="row">
                     <RenderCampsite campsite={props.campsite} />
                     <RenderComments comments={props.campsite.comments} />
                 </div>
             </div>
-       );
-    } else{ 
-        return (
-        <div />
         );
     }
-} 
+    return <div />;
+}
 
 export default CampsiteInfo;
