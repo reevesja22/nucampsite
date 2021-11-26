@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Directory from './DirectoryComponent';
 import CampsiteInfo from '../components/CampsiteInfoComponent';
 import Header from './HeaderComponent';
-import Footer from './FootComponent';
+import Footer from './FooterComponent';
 import Home from './HomeComponent';
 import Contact from './ContactComponent';
 import About from './AboutComponent';
