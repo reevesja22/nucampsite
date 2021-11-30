@@ -9,7 +9,7 @@ function RenderCard({item, isLoading, errMess}) {
         return <Loading />;
     }
     if (errMess) {
-        return <h4>{errMess}</h4>
+        return <h4>{errMess}</h4>;
     }
     return (
         <Card>
@@ -27,11 +27,11 @@ function Home(props) {
         <div className="container">
             <div className="row">
                 <div className="col-md m-1">
-                    <RenderCard 
+                    <RenderCard
                         item={props.campsite}
-                        isLoading={props.campsiteLoading}
+                        isLoading={props.campsitesLoading}
                         errMess={props.campsitesErrMess}
-                        />
+                    />
                 </div>
                 <div className="col-md m-1">
                     <RenderCard item={props.promotion} />
