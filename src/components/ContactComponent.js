@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Breadcrumb, BreadcrumbItem, Button, Label, Input, Col, Row } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem, Button, Label, Col, Row } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { valueToNode } from '@babel/types';
 import { Control, Form, Errors } from 'react-redux-form';
@@ -20,7 +20,7 @@ class Contact extends Component {
             phoneNum: '',
             email: '',
             agree: false,
-            constactType: 'By Phone',
+            contactType: 'By Phone',
             feedback: '',
             touched: {
                 firstName: false,
@@ -36,8 +36,7 @@ class Contact extends Component {
 
 
     handleSubmit(values) {
-        console.log('Current State is: ' + JSON.stringify(values));
-        alert('Current State is: ' + JSON.stringify(values));
+        this.props.postFeedback(values);
         this.props.resetFeedbackForm();
     }
 

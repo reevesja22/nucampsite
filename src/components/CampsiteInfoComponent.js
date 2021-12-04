@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody, Breadcrumb, BreadcrumbItem, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, Col, Row } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, Breadcrumb, BreadcrumbItem, Button, Modal, ModalHeader, ModalBody, Label } from 'reactstrap';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Link } from 'react-router-dom';
 import { Loading } from './LoadingComponent';
@@ -132,7 +132,7 @@ function RenderComments({comments, postComment, campsiteId}) {
         return(
             <div className="col-md-5 m-1">
                 <h4>Comments</h4>
-                <Stagger in>
+                <Stagger delay={150} reverse in>
                     {
                         comments.map(comment => {
                             return (
